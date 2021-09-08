@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "364836370092",
+    "project_id": "photo-detect-poc",
+    "storage_bucket": "photo-detect-poc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364836370092:android:90042f608396a7060e5109",
+        "android_client_info": {
+          "package_name": "com.bluehorizoninfotech.photo_detect_poc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364836370092-rsr7ci7ho9ak0320vsvvr1noblb411s9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bluehorizoninfotech.photo_detect_poc",
+            "certificate_hash": "ae1c52a05339f341869069e3c492675073eec00b"
+          }
+        },
+        {
+          "client_id": "364836370092-i3vbmvn9dd46t77hsp1cu9s065e7vttt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKtSfAcPIyv0v6JxdZzVCRNTio1Vu-P7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364836370092-i3vbmvn9dd46t77hsp1cu9s065e7vttt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
