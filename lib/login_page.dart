@@ -34,11 +34,11 @@ class LoginPage extends StatelessWidget {
               text: 'Authentication using Google',
             ),
             const ObjectivePoint(
-              checked: false,
+              checked: true,
               text: 'Take a photo',
             ),
             const ObjectivePoint(
-              checked: false,
+              checked: true,
               text:
                   'Optimize the photo to be transported across slow network (800KB prefered)',
             ),
