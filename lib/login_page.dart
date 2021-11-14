@@ -69,17 +69,24 @@ class LoginPage extends StatelessWidget {
             ),
             Button(
               width: width,
+              height: 50,
               color: Colors.green,
               radius: 50,
               text: 'Login using Google',
               onPressed: _signInWithGoogle,
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Button(
               width: width,
+              height: 50,
               color: Colors.blue.shade900,
               radius: 50,
               text: 'Login using Facebook',
-              onPressed: () {},
+              onPressed: () {
+                _signInWithFacebook(context);
+              },
             ),
           ],
         ),
@@ -94,12 +101,26 @@ class LoginPage extends StatelessWidget {
       print(e.toString());
     }
   }
+
+  Future<void> _signInWithFacebook(BuildContext context) async {
+    try {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          behavior: SnackBarBehavior.floating,
+          content: Text(
+            'Login using Facebook is under construction',
+          ),
+        ),
+      );
+    } catch (e) {}
+  }
 }
 
 class Button extends StatelessWidget {
   const Button({
     Key? key,
     required this.width,
+    required this.height,
     required this.color,
     required this.radius,
     required this.text,
@@ -107,6 +128,7 @@ class Button extends StatelessWidget {
   }) : super(key: key);
 
   final double width;
+  final double height;
   final Color color;
   final double radius;
   final String text;
@@ -116,15 +138,20 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: color,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(radius),
-          ),
+          shape: const StadiumBorder(),
         ),
         onPressed: onPressed,
-        child: Text(text),
+        child: Text(
+          text,
+          style: Theme.of(context)
+              .textTheme
+              .headline6!
+              .copyWith(color: Colors.white),
+        ),
       ),
     );
   }

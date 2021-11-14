@@ -45,6 +45,9 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                elevation: 5,
+              ),
               onPressed: () async {
                 // Obtain a list of the available cameras on the device.
                 final cameras = await availableCameras();
@@ -60,6 +63,24 @@ class _HomePageState extends State<HomePage> {
               },
               icon: const Icon(Icons.camera_alt_outlined),
               label: const Text('Take a picture'),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    behavior: SnackBarBehavior.floating,
+                    content: Text(
+                      'Streaming option is held up by provision from the back end',
+                    ),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.camera_alt_outlined),
+              label: const Text('Streaming camera'),
+              style: ElevatedButton.styleFrom(
+                elevation: 5,
+                primary: Colors.green,
+              ),
             ),
           ],
         ),
